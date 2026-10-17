@@ -6,7 +6,6 @@ import { Toaster } from "@/components/ui/toast"
 import '@stream-io/video-react-sdk/dist/css/styles.css'
 import 'react-datepicker/dist/react-datepicker.css'
 
-
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -26,7 +25,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "YOOM",
   description: "Video meeting application",
-  icons:{
+  icons: {
     icon: '/svgfile/logo.svg'
   }
 };
@@ -52,30 +51,14 @@ export default function RootLayout({
 
             variables: {
               colorPrimary: "#0E78F9",
-
-              // Clerk card
               colorBackground: "#1C1F2E",
-
-              // Main text
               colorForeground: "#FFFFFF",
-
-              // Secondary text
               colorMutedForeground: "#A5A8B8",
-
-              // Input
               colorInput: "#252A41",
               colorInputForeground: "#FFFFFF",
-
-              // Border
               colorBorder: "#f3f5ff",
-
-              // Focus
               colorRing: "#0E78F9",
-
-              // Button text
               colorPrimaryForeground: "#FFFFFF",
-
-              // Font
               fontFamily: "var(--font-outfit)",
             },
 
@@ -89,11 +72,16 @@ export default function RootLayout({
               headerSubtitle:
                 "text-[#A5A8B8]",
 
+              // Icon-style social buttons (Google, Facebook, GitHub) — white bg
+              socialButtonsIconButton:
+                "!bg-white border border-[#d1d5db] hover:!bg-gray-100",
+
+              // Keep block button white too, in case variant ever changes
               socialButtonsBlockButton:
-                "bg-transparent border border-[#2C3045] hover:bg-[#252A41]",
+                "!bg-white border border-[#d1d5db] hover:!bg-gray-100",
 
               socialButtonsBlockButtonText:
-                "text-white",
+                "!text-black font-medium",
 
               formFieldLabel:
                 "text-white",
